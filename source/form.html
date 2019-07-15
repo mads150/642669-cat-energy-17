@@ -41,9 +41,75 @@
         </nav>
       </header>
       <main class="form-page">
-        <!--
-          Блоки, которые будут размечены позже
-        -->
+        <section class="filters">
+          <h1 class="filters__title page-title">Подбор программы</h1>
+          <b class="filters__slogan">Заполните анкету и мы подберем программу питания для вашего кота</b>
+          <form class="filters__form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="filters__questionnaire questionnaire">
+              <label for="cat-name">Имя:*</label>
+              <input class="filters__item questionnaire__item" type="text" name="name" id="cat-name" placeholder="Барсик">
+
+              <label for="cat-weight">Вес (кг):*</label>
+              <input class="filters__item questionnaire__item" type="text" name="weight" id="cat-weight" placeholder="7">
+
+              <label for="cat-age">Возраст (лет):</label>
+              <input class="filters__item questionnaire__item" type="text" name="age" id="cat-age" placeholder="7">
+            </div>
+            <div class="filters__aim aim">
+              <input class="filters__item aim__item" type="radio" name="weight-loose" id="weight-loose" checked>
+              <label for="weight-loose">Похудение</label>
+
+              <input class="filters__item aim__item" type="radio" name="muscles-add" id="muscles-add">
+              <label for="muscles-add">Набор массы</label>
+
+              <input class="filters__item aim__item" type="radio" name="unknown" id="unknown">
+              <label for="unknown">Не знаю (Нужен ваш совет)</label>
+            </div>
+
+            <div class="filters__data filter owner-data">
+              <h2 class="filter__title">Контактные данные(владельца кота)</h2>
+              <label for="email">E-mail:*</label>
+              <input class="filters__item owner-data__item" type="text" name="email" id="email" placeholder="kuklachev@gmail.com">
+
+              <label for="telephone">Телефон:*</label>
+              <input class="filters__item owner-data__item" type="text" name="telephone" id="telephone" placeholder="8 (960) 900-60-90">
+            </div>
+
+            <div class="filters__comment filter comment">
+              <h2 class="filter__title">Комментарий</h2>
+              <textarea class="filters__item comment__item" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
+
+            <div class="filters__additional filter addition">
+              <h2 class="filter__title">Дополнительно</h2>
+              <input class="filters__item addition__item" type="checkbox" name="sweetener" id="sweetener" checked>
+              <label for="sweetener">Сахарозаменитель</label>
+
+              <input class="filters__item addition__item" type="checkbox" name="water" id="water">
+              <label for="water">Питьевая вода</label>
+
+              <input class="filters__item addition__item" type="checkbox" name="milk" id="milk">
+              <label for="milk">Молоко</label>
+
+              <input class="filters__item addition__item" type="checkbox" name="vitamins" id="vitamins">
+              <label for="vitamins">Витамины</label>
+            </div>
+            <button class="button" type="submit">Отправить заявку</button>
+            <small class="filters__item">
+              <sup>*</sup> — Обязательные поля
+            </small>
+          </form>
+        </section>
+        <section class="partnership">
+          <h2 class="visually-hidden">Сотрудничество</h2>
+          <div class="partnership__wrapper partnership__wrapper--grey">
+            <b class="partnership__info">Приглашаем<br> к сотрудничеству дилеров!</b>
+            <p class="partnership__adress">ул. Большая<br> Конюшенная, д. 19/8<br><span>Санкт-Петербург</span></p>
+          </div>
+          <div class="map">
+            <img class="map__image" src="img/map.jpg" width="320" height="400" alt="Карта ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+          </div>
+        </section>
       </main>
       <footer class="page-footer">
         <div class="page-footer__wrapper">
