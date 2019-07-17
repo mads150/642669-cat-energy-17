@@ -1,0 +1,52 @@
+//Файл с общими стилями
+
+body {
+  margin: 0;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: @smaller;
+  line-height: @smaller + 4;
+  font-weight: @regular;
+  background-color: @white;
+  color: @base-text-color;
+}
+
+.index-energy-wrapper {
+  background: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top 2.8% center;
+}
+
+.index-energy-wrapper,
+.catalog-energy-wrapper,
+.form-energy-wrapper {
+  width: 320px;
+  outline: 1px solid blue;
+}
+
+.container {
+  outline: 1px solid @red;
+  width: 280px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: @nondecorated;
+}
