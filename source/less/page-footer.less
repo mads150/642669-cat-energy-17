@@ -4,3 +4,15 @@
   padding-bottom: 30px;
   background-color: @light-grey;
 }
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

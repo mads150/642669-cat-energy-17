@@ -1,5 +1,28 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
   outline: 2px solid #47229d;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.page-header__logo {
+  height: 45px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+    height: 65px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  height: 75px;
 }

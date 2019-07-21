@@ -1,7 +1,13 @@
 .page-intro {
+  min-height: 300px;
   padding-top: 25px;
   padding-bottom: 25px;
-  outline: 1px solid #4853e6;
+  outline: 1px solid blue;
+}
+
+.page-intro__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .page-intro__title {
@@ -14,7 +20,19 @@
   text-align: center;
 }
 
+@media (min-width: @tablet-width) {
+  .page-intro__title {
+    width: 420px;
+    margin-left: 90px;
+    font-size: @large;
+    line-height: @large;
+    color: @text-color;
+    text-align: left;
+  }
+}
+
 .page-intro__slogan {
+  text-align: center;
   font-size: @smaller;
   line-height: @smaller;
   font-weight: @regular;
@@ -22,7 +40,38 @@
   text-transform: uppercase;
 }
 
+@media (min-width: @tablet-width) {
+  .page-intro__slogan {
+    margin-left: 90px;
+    font-size: @smaller + 6;
+    line-height: @smaller + 6;
+    color: @text-color;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-intro__title,
+  .page-intro__slogan,
+  .page-intro__button {
+    margin-left: 80px;
+  }
+}
+
 .page-intro__button {
+  margin-top: 30px;
+  padding: 13px 0;
   font-size: @smaller;
   line-height: @smaller + 4;
+}
+
+@media (min-width: @tablet-width) {
+  .page-intro__button {
+    width: 195px;
+    margin-left: 90px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: @smaller + 6;
+    line-height: @smaller + 6;
+  }
 }
