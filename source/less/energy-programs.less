@@ -8,11 +8,29 @@
   list-style: none;
 }
 
+@media (min-width: @desktop-width) {
+  .energy-programs__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .energy-programs__item {
+  outline: 1px dotted pink;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
   background-color: @light-grey;
 }
 
+@media (min-width: @desktop-width) {
+  .energy-programs__item {
+    width: 570px;
+  }
+}
+
 .energy-programs__title {
+  padding-left: 90px;
   font-size: @smaller + 10;
   line-height: @bigger + 1;
   font-weight: @regular;
@@ -20,7 +38,18 @@
   text-transform: uppercase;
 }
 
+@media (min-width: @tablet-width) {
+  .energy-programs__title {
+    margin-left: 50px;
+    padding-left: 0;
+    font-size: @bigger;
+    line-height: @bigger + 1;
+  }
+}
+
 .energy-programs__text {
+  width: 228px;
+  margin-left: 20px;
   font-family: "Arial", sans-serif;
   font-size: @smaller;
   line-height: @smaller + 4;
@@ -28,10 +57,36 @@
   color: @base-text-color;
 }
 
+@media (min-width: @tablet-width) {
+  .energy-programs__text {
+    width: 350px;
+    margin-left: 50px;
+    font-size: @smaller + 2;
+    line-height: @smaller + 10;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .energy-programs__text {
+    width: 465px;
+  }
+}
+
 .energy-programs__button {
+  margin-left: 20px;
+  margin-top: 18px;
+  margin-bottom: 20px;
   font-size: @smaller + 2;
   line-height: @smaller + 2;
   font-weight: @regular;
   color: @text-color;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .energy-programs__button {
+    margin-left: 50px;
+    font-size: @smaller + 6;
+    line-height: @smaller + 6;
+  }
 }

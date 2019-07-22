@@ -1,5 +1,3 @@
-//Файл с общими стилями
-
 body {
   margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
@@ -13,7 +11,21 @@ body {
 .index-energy-wrapper {
   background: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: top 2.8% center;
+  background-position: top 12% center;
+}
+
+@media (min-width: @tablet-width) {
+  .index-energy-wrapper {
+    background: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .index-energy-wrapper {
+    background: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
 }
 
 .index-energy-wrapper,
@@ -23,11 +35,45 @@ body {
   outline: 1px solid blue;
 }
 
+@media (min-width: @tablet-width) {
+  .index-energy-wrapper,
+  .catalog-energy-wrapper,
+  .form-energy-wrapper {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .index-energy-wrapper,
+  .catalog-energy-wrapper,
+  .form-energy-wrapper {
+    width: 1440px;
+  }
+}
+
 .container {
   outline: 1px solid @red;
   width: 280px;
   margin: 0 auto;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    outline: 1px solid green;
+    width: 708px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    outline: 1px solid green;
+    width: 1220px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
 .visually-hidden {
