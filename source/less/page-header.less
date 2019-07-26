@@ -1,7 +1,6 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  outline: 2px solid #47229d;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -10,19 +9,28 @@
   .page-header {
     display: flex;
     flex-direction: row;
+    padding-top: 30px;
   }
 }
 
 .page-header__logo {
   height: 45px;
+
+  .st0 {
+    fill: #FCC305;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-header__logo {
-    height: 65px;
+    height: 58px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  height: 75px;
+  .page-header__logo {
+    display: block;
+    height: 75px;
+    margin-top: 34px;
+  }
 }

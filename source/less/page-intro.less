@@ -1,8 +1,26 @@
 .page-intro {
-  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
   padding-top: 25px;
-  padding-bottom: 25px;
-  outline: 1px solid blue;
+
+  background: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+@media (min-width: @tablet-width) {
+  .page-intro {
+    padding-bottom: 470px;
+    background: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-intro {
+    padding-bottom: 0;
+    margin-bottom: 210px;
+  }
 }
 
 .page-intro__wrapper {
@@ -12,7 +30,7 @@
 
 .page-intro__title {
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   font-size: @bigger;
   line-height: @bigger;
   font-weight: @regular;
@@ -24,6 +42,7 @@
   .page-intro__title {
     width: 420px;
     margin-left: 90px;
+    margin-top: 27px;
     font-size: @large;
     line-height: @large;
     color: @text-color;
@@ -31,7 +50,14 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .page-intro__title {
+    margin-top: 48px;
+  }
+}
+
 .page-intro__slogan {
+  margin-bottom: 30px;
   text-align: center;
   font-size: @smaller;
   line-height: @smaller;
@@ -42,11 +68,20 @@
 
 @media (min-width: @tablet-width) {
   .page-intro__slogan {
+    margin: 0;
+    margin-bottom: 50px;
     margin-left: 90px;
+    margin-top: 15px;
     font-size: @smaller + 6;
     line-height: @smaller + 6;
     color: @text-color;
     text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-intro__slogan {
+    margin-bottom: 55px;
   }
 }
 
@@ -58,20 +93,48 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .page-intro__image {
+    position: absolute;
+    top: 250px;
+    left: 0;
+    width: 630px;
+    height: 609px;
+    margin-left: 80px;
+    z-index: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-intro__image {
+    top: 25px;
+    left: 500px;
+    margin-left: -15px;
+    margin-top: -30px;
+    width: 520px;
+    height: 499px;
+    z-index: 1;
+  }
+}
+
 .page-intro__button {
-  margin-top: 30px;
-  padding: 13px 0;
+  padding: 11px 0;
   font-size: @smaller;
   line-height: @smaller + 4;
 }
 
 @media (min-width: @tablet-width) {
   .page-intro__button {
-    width: 195px;
     margin-left: 90px;
-    padding-left: 25px;
-    padding-right: 25px;
+    width: 195px;
+    padding: 16px 25px;
     font-size: @smaller + 6;
     line-height: @smaller + 6;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-intro__button {
+    margin-left: 80px;
   }
 }

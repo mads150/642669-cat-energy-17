@@ -8,12 +8,6 @@ body {
   color: @base-text-color;
 }
 
-.index-energy-wrapper {
-  background: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: top 12% center;
-}
-
 @media (min-width: @tablet-width) {
   .index-energy-wrapper {
     background: none;
@@ -76,7 +70,7 @@ body {
   }
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
