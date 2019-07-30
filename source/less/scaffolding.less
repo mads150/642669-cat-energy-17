@@ -6,12 +6,28 @@ body {
   font-weight: @regular;
   background-color: @white;
   color: @base-text-color;
+  counter-reset: section;
 }
 
-.index-energy-wrapper {
-  background: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: top 12% center;
+@media (min-width: @desktop-width) {
+  .index-energy-wrapper {
+    position: relative;
+  }
+
+  .index-energy-wrapper::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 696px;
+    background-color: #63a73a;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -20,26 +36,17 @@ body {
   }
 }
 
-@media (min-width: @desktop-width) {
-  .index-energy-wrapper {
-    background: url("../img/index-background-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: top right;
-  }
-}
-
 .index-energy-wrapper,
 .catalog-energy-wrapper,
 .form-energy-wrapper {
-  width: 320px;
-  outline: 1px solid blue;
+  min-width: 320px;
 }
 
 @media (min-width: @tablet-width) {
   .index-energy-wrapper,
   .catalog-energy-wrapper,
   .form-energy-wrapper {
-    width: 768px;
+    min-width: 768px;
   }
 }
 
@@ -47,7 +54,7 @@ body {
   .index-energy-wrapper,
   .catalog-energy-wrapper,
   .form-energy-wrapper {
-    width: 1440px;
+    min-width: 1300px;
   }
 }
 
@@ -60,7 +67,6 @@ body {
 
 @media (min-width: @tablet-width) {
   .container {
-    outline: 1px solid green;
     width: 708px;
     margin: 0 auto;
     padding: 0;
@@ -69,14 +75,13 @@ body {
 
 @media (min-width: @desktop-width) {
   .container {
-    outline: 1px solid green;
     width: 1220px;
     margin: 0 auto;
     padding: 0;
   }
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;

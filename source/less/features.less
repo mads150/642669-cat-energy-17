@@ -1,10 +1,25 @@
-.features {
-  outline: 1px solid #01cc00;
+.features__title {
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+}
+
+@media (min-width: @tablet-width) {
+  .features__title {
+    padding-top: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features__title {
+    padding-top: 30px;
+  }
 }
 
 .features__list {
   margin: 0;
   padding: 0;
+  padding-top: 10px;
   list-style: none;
 }
 
@@ -22,17 +37,40 @@
 }
 
 .features__item {
-  outline: 1px dotted green;
+  position: relative;
   width: 200px;
   padding-left: 80px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 @media (min-width: @tablet-width) {
   .features__item {
     width: 245px;
-    margin-right: 100px;
     padding: 0;
+    padding-top: 125px;
+    margin-bottom: 55px;
+
+    &::before {
+      position: absolute;
+      top: -5px;
+      left: 118px;
+      z-index: -1;
+      font-size: 282px;
+      line-height: 282px;
+      color: @light-grey;
+      counter-increment: section;
+      content: " " counter(section) "";
+    }
+  }
+
+  .features__item:nth-child(2n) {
+    margin-left: 140px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features__item:nth-child(2n) {
+    margin-left: 0;
   }
 }
 
@@ -42,18 +80,83 @@
   }
 }
 
+@media (max-width: @mobile-width-only) {
+  .features__item--clock br {
+    display: none;
+  }
+}
+
 .features__text {
+  position: relative;
   font-family: "Arial", sans-serif;
   font-size: @smaller;
   line-height: @smaller + 4;
   font-weight: @regular;
   color: @base-text-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background-color: @mohito;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: -75px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.features__item--leaf .features__text::after {
+  background-image: url("../img/advantage-leaf@1x.png");
+}
+
+.features__item--powder .features__text::after {
+  background-image: url("../img/advantage-powder@1x.png");
+}
+
+.features__item--meal .features__text::after {
+  background-image: url("../img/advantage-dining@1x.png");
+}
+
+.features__item--clock .features__text::after {
+  background-image: url("../img/advantage-clock@1x.png");
+}
+
+@media (min-width: @tablet-width) {
+  .features__item--clock .features__text {
+    width: 245px;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .features__text {
+    padding-top: 8px;
     width: 245px;
     font-size: @smaller + 2;
     line-height: @smaller + 10;
+
+    &::before {
+      top: -105px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      top: -90px;
+      left: 16px;
+      width: 50px;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }

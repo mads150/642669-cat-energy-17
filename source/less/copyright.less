@@ -1,6 +1,14 @@
 .copyright {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 19px;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    padding-top: 0;
+  }
 }
 
 .copyright__link {
@@ -9,4 +17,12 @@
   line-height: @smaller + 2;
   font-weight: @regular;
   color: @base-text-color;
+}
+
+.copyright__logo {
+  transform: scale(1.5);
+
+  path {
+    fill: #666666;
+  }
 }
