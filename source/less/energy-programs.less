@@ -169,11 +169,15 @@
 
 @media (min-width: @tablet-width) {
   .energy-programs__text {
-    width: 350px;
+    width: 375px;
     margin-left: 55px;
     margin-bottom: 15px;
     font-size: @smaller + 2;
     line-height: @smaller + 10;
+  }
+
+  .energy-programs__text--pro {
+    width: 340px;
   }
 }
 
@@ -218,6 +222,10 @@
       top: 4px;
       left: 130px;
     }
+
+    &--pro::after {
+      left: 125px;
+    }
   }
 }
 
@@ -225,4 +233,5 @@
   .energy-programs__button {
     margin-top: 5px;
   }
+
 }
