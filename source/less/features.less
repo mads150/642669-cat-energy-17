@@ -58,17 +58,14 @@
       font-size: 282px;
       line-height: 282px;
       color: @light-grey;
+      counter-increment: section;
+      content: " " counter(section) "";
     }
   }
 
   .features__item:nth-child(2n) {
     margin-left: 140px;
   }
-
-.features__item::before {
-  counter-increment: section;
-  content: " " counter(section) "";
-}
 }
 
 @media (min-width: @desktop-width) {
@@ -83,7 +80,7 @@
   }
 }
 
-@media(max-width: @mobile-width-only) {
+@media (max-width: @mobile-width-only) {
   .features__item--clock br {
     display: none;
   }
@@ -139,7 +136,6 @@
   }
 }
 
-
 @media (min-width: @tablet-width) {
   .features__text {
     padding-top: 8px;
@@ -163,5 +159,4 @@
       background-size: cover;
     }
   }
-
 }
