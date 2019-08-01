@@ -1,19 +1,18 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
-    outline: 1px solid blue;
     display: flex;
     flex-direction: row;
     width: 708px;
     margin: 0 auto;
     padding: 0;
-    padding-top: 22px;
+    padding-top: 25px;
   }
 }
 
@@ -33,25 +32,24 @@
   }
 }
 
-
 .page-header__logo {
-  height: 45px;
-
-  .st0 {
-    fill: #fcc305;
-  }
+  height: 43px;
 }
 
 @media (min-width: @tablet-width) {
   .page-header__logo {
-    height: 58px;
+    display: block;
+    width: 175px;
+    height: 65px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header__logo {
-    display: block;
-    height: 75px;
-    margin-top: 60px;
+    width: 205px;
+    height: 65px;
+    margin-top: 57px;
+    margin-left: 4px;
+    transform: scale(1.05);
   }
 }
