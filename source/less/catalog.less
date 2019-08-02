@@ -1,18 +1,18 @@
 .catalog__title {
   margin: 0;
   padding: 0;
-  margin-top: 13px;
+  margin-top: 15px;
 }
 
 @media (min-width: @tablet-width) {
   .catalog__title {
-    margin-top: 65px;
+    margin-top: 50px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog__title {
-    margin-top: 55px;
+    margin-top: 68px;
   }
 }
 
@@ -47,27 +47,25 @@
 
 @media (min-width: @tablet-width) {
   .catalog__item {
-    width: 250px;
-    padding: 0 37px;
+    width: 324px;
     margin-bottom: 0;
-    margin-top: 141px;
+    margin-top: 140px;
     background-color: @light-grey;
   }
 
   .catalog__item:last-child {
-    width: 248px;
+    width: 322px;
     border: 1px solid rgba(41, 41, 41, 0.2);
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog__item {
-    width: 170px;
-    padding: 0 37px;
+    width: 244px;
   }
 
   .catalog__item:last-child {
-    width: 168px;
+    width: 242px;
   }
 
   .catalog__item:not(:nth-child(4n)) {
@@ -78,14 +76,38 @@
 @media (max-width: @mobile-width-only) {
   .catalog__pic-wrapper {
     width: 140px;
+    height: 144px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .catalog__pic-wrapper {
-    outline: 1px solid pink;
-    height: 195px;
-    transform: translateY(-80px);
+    height: 174px;
+    transform: translateY(-46px);
+    margin-bottom: 40px;
+
+    &--big {
+      height: 208px;
+      transform: translateY(-82px);
+      margin-bottom: 5px;
+    }
+
+    &--chicken {
+      height: 172px;
+      margin-bottom: 41px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__pic {
+    width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__pic {
+    width: 245px;
   }
 }
 
@@ -126,11 +148,17 @@
 
 @media (min-width: @tablet-width) {
   .catalog__name {
-    margin: 18px auto 17px auto;
+    margin: 0 95px 0 99px;
     width: 130px;
     font-size: @smaller + 6;
     line-height: @smaller + 6;
     text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__name {
+    margin: 0 auto;
   }
 }
 
@@ -153,6 +181,7 @@
   .catalog__findings {
     font-size: @smaller + 2;
     line-height: @smaller + 2;
+    margin: 17px 37px 1px 37px;
   }
 }
 
@@ -179,19 +208,19 @@
 
 .catalog__button {
   padding: 10px 0;
-  margin-top: 3px;
+  //margin-top: 3px;
 }
 
 @media (min-width: @tablet-width) {
   .catalog__button {
     padding: 10px 0;
-    margin: 30px 0 40px 0;
+    margin: 30px 36px 40px 38px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog__button {
-    margin: 32px 0 40px 0;
+    margin: 31px 38px 40px 39px;
   }
 }
 

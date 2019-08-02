@@ -71,19 +71,23 @@
     &::before {
       content: "";
       position: absolute;
-      top: 90px;
-      left: 445px;
+      top: 92px;
+      left: 446px;
       width: 200px;
       height: 200px;
       background-color: @mohito;
       border-radius: 50%;
     }
 
+    &--pro::before {
+      left: 448px;
+    }
+
     &--slim::after {
       content: "";
       position: absolute;
-      top: 77px;
-      left: 475px;
+      top: 80px;
+      left: 476px;
       width: 140px;
       height: 194px;
       background-image: url("../img/icon-cat-slim.svg");
@@ -94,7 +98,7 @@
       content: "";
       position: absolute;
       top: 135px;
-      left: 410px;
+      left: 413px;
       width: 268px;
       height: 112px;
       background-image: url("../img/icon-cat-pro.svg");
@@ -142,7 +146,7 @@
 
 @media (min-width: @tablet-width) {
   .energy-programs__title {
-    margin: 70px 0 20px 55px;
+    margin: 71px 0 21px 54px;
     padding-left: 0;
     font-size: @bigger;
     line-height: @bigger + 1;
@@ -170,8 +174,8 @@
 @media (min-width: @tablet-width) {
   .energy-programs__text {
     width: 375px;
-    margin-left: 55px;
-    margin-bottom: 15px;
+    margin-left: 54px;
+    margin-bottom: 14px;
     font-size: @smaller + 2;
     line-height: @smaller + 10;
   }
@@ -183,7 +187,7 @@
 
 @media (min-width: @desktop-width) {
   .energy-programs__text {
-    margin-top: 50px;
+    margin-top: 48px;
     margin-bottom: 0;
     width: 465px;
   }
@@ -214,7 +218,7 @@
 
 @media (min-width: @tablet-width) {
   .energy-programs__button {
-    margin-left: 55px;
+    margin-left: 54px;
     font-size: @smaller + 6;
     line-height: @smaller + 6;
 
