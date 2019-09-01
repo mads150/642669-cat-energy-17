@@ -1,8 +1,25 @@
-.filters {
-  outline: 1px solid #009800;
+.filters__title {
+  margin-top: 0;
+  margin-bottom: 26px;
+  padding-top: 15px;
+}
+
+@media (min-width: @tablet-width) {
+  .filters__title {
+    margin-top: 50px;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filters__title {
+    margin-top: 67px;
+  }
 }
 
 .filters__slogan {
+  display: block;
+  width: 226px;
   font-size: @smaller;
   line-height: @smaller + 4;
   font-weight: @regular;
@@ -10,15 +27,100 @@
   text-transform: uppercase;
 }
 
+@media (min-width: @tablet-width) {
+  .filters__slogan {
+    width: 324px;
+    margin-top: 56px;
+    margin-bottom: 28px;
+    margin-left: 40px;
+    font-size: @smaller + 6;
+    line-height: @bigger - 6;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filters__slogan {
+    margin-left: 0;
+  }
+}
+
 .filters__form {
-  margin-top: 20px;
-  padding: 20px 0;
+  padding: 20px 0 32px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .filters__form {
+    padding: 20px 0 72px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filters__form {
+    padding: 20px 0 83px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filters__program-data {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .button-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 522px;
+    margin-left: 42px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button-wrapper {
+    width: 829px;
+    margin-left: 2px;
+    margin-top: 9px;
+  }
+}
+
+.filters__button {
+  padding: 10px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .filters__button {
+    padding: 16px 68px 16px 60px;
+    font-size: @smaller + 6;
+    line-height: @smaller + 6;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filters__button {
+    padding: 16px 206px 16px 208px;
+  }
 }
 
 .filters__explain {
+  margin: 16px auto 0 auto;
   font-family: "Arial", sans-serif;
   font-size: @smaller;
   line-height: @smaller + 2;
   font-weight: @regular;
   color: @base-text-color;
+}
+
+@media (min-width: @tablet-width) {
+  .filters__explain {
+    margin: 0;
+    margin-top: 11px;
+    font-size: @smaller + 2;
+    line-height: @smaller + 2;
+  }
 }

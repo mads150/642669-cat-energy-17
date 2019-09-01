@@ -203,6 +203,10 @@
   font-weight: @regular;
   color: @text-color;
   text-transform: uppercase;
+
+  &:disabled {
+    color: rgba(17, 17, 17, 0.3);
+  }
 }
 
 .energy-programs__button::after {
@@ -215,6 +219,11 @@
   background-image: url("../img/icon-right-arrow-long.svg");
   background-repeat: no-repeat;
 }
+
+/*.energy-programs__button:hover::after {
+  width: 30px;
+  background-color: rgba(17, 17, 17, 0.3);
+}*/
 
 @media (min-width: @tablet-width) {
   .energy-programs__button {
