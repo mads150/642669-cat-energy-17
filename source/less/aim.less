@@ -94,14 +94,11 @@
   }
 }
 
-#weight-loose:checked ~ .aim__loose::before,
-#muscles-add:checked ~ .aim__loose::before,
-#need-advice:checked ~ .aim__loose::before {
+
+.aim__item:checked ~ .aim__loose::before {
   background-color: @mohito;
 }
 
-#weight-loose:checked ~ .aim__loose:disabled::before,
-#muscles-add:checked ~ .aim__loose:disabled::before,
-#need-advice:checked ~ .aim__loose:disabled::before {
+.aim__item:checked ~ .aim__loose:disabled::before {
   background-color: rgba(104, 183, 56, 0.3);
 }

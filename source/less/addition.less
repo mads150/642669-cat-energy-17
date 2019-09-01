@@ -150,7 +150,6 @@
   &:disabled::after {
     border: 1px solid rgba(186, 186, 186, 0.3);
   }
-
 }
 
 @media (min-width: @tablet-width) {
@@ -180,10 +179,7 @@
   }
 }
 
-#sweetener:checked ~ .addition__item-text::after,
-#water:checked ~ .addition__item-text::after,
-#milk:checked ~ .addition__item-text::after,
-#vitamins:checked ~ .addition__item-text::after {
+.addition__item:checked ~ .addition__item-text::after {
   width: 18px;
   height: 9px;
   border: 2px solid @mohito;
@@ -194,10 +190,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  #sweetener:checked ~ .addition__item-text::after,
-  #water:checked ~ .addition__item-text::after,
-  #milk:checked ~ .addition__item-text::after,
-  #vitamins:checked ~ .addition__item-text::after {
+  .addition__item:checked ~ .addition__item-text::after {
     width: 18px;
     height: 9px;
     border: 2px solid @mohito;
