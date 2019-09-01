@@ -1,5 +1,8 @@
 .owner-data {
-  outline: 1px solid green;
+  padding-bottom: 10px;
+}
+
+.owner-data label {
   padding: 20px 0;
   font-size: @smaller + 2;
   line-height: @smaller + 4;
@@ -8,12 +11,270 @@
   text-transform: uppercase;
 }
 
+@media (min-width: @tablet-width) {
+  .owner-data label {
+    font-size: @smaller + 6;
+    line-height: @smaller + 6;
+  }
+}
+
+.owner-data__title {
+  position: relative;
+  margin-top: 28px;
+  margin-bottom: 34px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 220px;
+    width: 100%;
+    height: 3px;
+    background-color: @mohito;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .owner-data__title {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    margin-left: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 710px;
+      width: 100%;
+      height: 3px;
+      background-color: @mohito;
+    }
+
+    &::after {
+      top: 20px;
+      left: 550px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .owner-data__title {
+    margin-top: 70px;
+    margin-left: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 1260px;
+      width: 100%;
+      height: 3px;
+      background-color: @mohito;
+    }
+
+    &::after {
+      top: 20px;
+      //left: 550px;
+      left: 592px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .owner-data__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2px;
+  }
+}
+
 .owner-data__item {
-  padding: 10px 0 10px 10px;
+  position: relative;
+  padding: 12px 0 12px 15px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: @smaller + 2;
   line-height: @smaller + 4;
   font-weight: @regular;
   color: @base-text-color;
   text-transform: uppercase;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:active {
+    border: 2px solid @base-text-color;
+  }
+
+  &:invalid {
+    border: 2px solid #ff8282;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .owner-data__item {
+    padding: 10px 0 10px 20px;
+    font-size: @smaller + 6;
+    line-height: @smaller + 6;
+
+    &:active {
+      padding: 9px 0 9px 20px;
+    }
+  }
+}
+
+.owner-data__email {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.owner-data__icon-mail {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  width: 17px;
+  height: 13px;
+}
+
+@media (min-width: @tablet-width) {
+  .owner-data__icon-mail {
+    top: 20px;
+    right: 56px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .owner-data__icon-mail {
+    top: 20px;
+    right: 21px;
+  }
+}
+
+.owner-data__item-email:active ~ .owner-data__icon-mail {
+  path {
+    fill: @mohito;
+  }
+}
+
+.owner-data__item-email:invalid ~ .owner-data__icon-mail {
+  path {
+    fill: #ff8282;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .owner-data__email {
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .owner-data__email {
+    width: 570px;
+    margin-left: 0;
+    }
+}
+
+.owner-data__phone {
+  position: relative;
+}
+
+.owner-data__icon-phone {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .owner-data__icon-phone {
+    top: 16px;
+    right: 53px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .owner-data__icon-phone {
+    top: 17px;
+    right: 18px;
+  }
+}
+
+.owner-data__item-phone:active ~ .owner-data__icon-phone {
+  path {
+    fill: @mohito;
+  }
+}
+
+.owner-data__item-phone:invalid ~ .owner-data__icon-phone {
+  path {
+    fill: #ff8282;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .owner-data__phone {
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .owner-data__phone {
+    margin-left: 0;
+    width: 570px;
+  }
+}
+
+.owner-data__item-email {
+  position: relative;
+  width: 199px;
+  margin-left: 8px;
+}
+
+@media (min-width: @tablet-width) {
+  .owner-data__item-email {
+    width: 529px;
+    margin-left: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .owner-data__item-email {
+    width: 465px;
+    margin-left: 18px;
+    padding-left: 18px;
+
+    &:active {
+      width: 463px;
+      padding: 9px 0 9px 18px;
+    }
+  }
+}
+
+.owner-data__item-phone {
+  width: 184px;
+  margin-left: 7px;
+}
+
+@media (min-width: @tablet-width) {
+  .owner-data__item-phone {
+    width: 514px;
+    margin-left: 12px;
+    padding: 10px 0 10px 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .owner-data__item-phone {
+    width: 451px;
+    margin-left: 12px;
+
+    &:active {
+      width: 449px;
+      padding: 9px 0 9px 18px;
+    }
+  }
 }

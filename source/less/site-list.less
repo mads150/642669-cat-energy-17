@@ -28,6 +28,14 @@
   font-weight: @medium;
   color: @text-color;
   text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -71,7 +79,7 @@
 }
 
 .site-list__item {
-  padding: 23px 0;
+  padding: 22px 0 21px 0;
   text-align: center;
 }
 
