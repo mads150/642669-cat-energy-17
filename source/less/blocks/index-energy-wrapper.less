@@ -1,0 +1,29 @@
+.index-energy-wrapper {
+  min-width: 320px;
+}
+
+@media (min-width: @tablet-width) {
+  .index-energy-wrapper {
+    min-width: 768px;
+    background: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .index-energy-wrapper {
+    position: relative;
+    min-width: 1300px;
+  }
+
+  .index-energy-wrapper::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 696px;
+    background-color: #63a73a;
+  }
+}
