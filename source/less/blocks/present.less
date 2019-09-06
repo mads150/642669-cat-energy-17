@@ -1,0 +1,126 @@
+.present {
+  width: 280px;
+  height: 289px;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 35px;
+}
+
+@media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+  .present {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .present {
+    width: 708px;
+    height: 200px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    margin-top: 69px;
+    margin-bottom: 75px;
+  }
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    .present {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .present {
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    width: 245px;
+    height: 289px;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    .present {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
+  }
+}
+
+.present__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 289px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .present__title-wrapper {
+    width: 708px;
+    height: 200px;
+    flex-direction: row;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .present__title-wrapper {
+    width: 245px;
+    height: 289px;
+    flex-direction: column;
+  }
+}
+
+.present__title {
+  position: relative;
+  font-family: "Arial", sans-serif;
+  font-size: @smaller + 2;
+  line-height: @smaller  + 6;
+  font-weight: @regular;
+  color: @white;
+  text-align: center;
+  width: 165px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 63px;
+}
+
+@media (min-width: @tablet-width) {
+  .present__title {
+    margin: 72px 0 0 277px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .present__title {
+    text-align: center;
+    margin: 62px auto 0 auto;
+  }
+}
+
+.present__image {
+  display: block;
+  margin: 0 auto;
+  margin-top: 65px;
+}
+
+@media (min-width: @tablet-width) {
+  .present__image {
+    margin: 65px 0 0 92px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .present__image {
+    margin: 64px auto 0 auto;
+  }
+}
+
+.present__image path {
+  fill: @white;
+}
