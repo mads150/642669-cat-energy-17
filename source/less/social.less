@@ -28,7 +28,7 @@
     }
   }
 
-  &:disabled {
+  &:active {
     path {
       fill: rgba(104, 183, 56, 0.3);
     }
@@ -44,6 +44,18 @@
   margin-right: 40px;
 }
 
+.social__link--instagram:hover {
+  circle {
+    fill: @mohito;
+  }
+}
+
+.social__link--instagram:active {
+  circle {
+    fill: rgba(104, 183, 56, 0.3);
+  }
+}
+
 @media (min-width: @tablet-width) {
   .social__link--vkontakte {
     margin-left: 27px;
@@ -51,6 +63,8 @@
   }
 
   .social__link--instagram {
-    margin-right: 29px;
+    display: block;
+    margin-top: 1px;
+    margin-right: 30px;
   }
 }

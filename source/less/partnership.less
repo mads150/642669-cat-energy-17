@@ -1,5 +1,13 @@
 @media (min-width: @desktop-width) {
   .partnership {
+    //outline: 1px solid red;
+    height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .partnership .container {
+    //width: 1300px;
     position: relative;
   }
 }
@@ -93,4 +101,53 @@
     margin-right: 0;
     text-align: left;
   }
+}
+
+.partnership__map {
+  height: 400px;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
+}
+
+@media (min-width: @tablet-width)  {
+  .partnership__map {
+    background-image: url("../img/bg-map-tablet@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+    }
+  }
+}
+
+@media (min-width: @desktop-width)  {
+  .partnership__map {
+    background-image: url("../img/bg-map-desktop@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+    }
+  }
+}
+
+.partnership__map iframe {
+  width: 100%;
+  border: none;
+  height: 362px;
+}
+
+@media (min-width: @tablet-width) {
+  .partnership__map iframe {
+    height: 396px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+}.partnership__map iframe {
+  height: 400px;
 }

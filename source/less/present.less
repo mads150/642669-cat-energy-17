@@ -1,9 +1,10 @@
 .present {
+  width: 280px;
+  height: 289px;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
-  margin-top: 40px;
+  background-size: 100%;
   margin-bottom: 35px;
-  padding: 64px 50px 40px 50px;
 }
 
 @media (min-resolution: 144dpi),
@@ -15,12 +16,12 @@
 
 @media (min-width: @tablet-width) {
   .present {
+    width: 708px;
+    height: 200px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-repeat: no-repeat;
-    height: 200px;
     margin-top: 69px;
-    margin-bottom: 0;
-    padding-bottom: 11px;
+    margin-bottom: 75px;
   }
 
   @media (min-resolution: 144dpi),
@@ -36,7 +37,7 @@
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-repeat: no-repeat;
     width: 245px;
-    height: 290px;
+    height: 289px;
     margin: 0;
     padding: 0;
   }
@@ -49,22 +50,28 @@
   }
 }
 
+.present__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 289px;
+  margin: 0 auto;
+}
+
 @media (min-width: @tablet-width) {
   .present__title-wrapper {
-    width: 498px;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 40px;
+    width: 708px;
+    height: 200px;
+    flex-direction: row;
   }
 }
 
+
 @media (min-width: @desktop-width) {
   .present__title-wrapper {
-    width: 160px;
+    width: 245px;
+    height: 289px;
     flex-direction: column;
-    //margin: 0;
-    padding: 0;
-    margin: 0 auto;
   }
 }
 
@@ -84,37 +91,36 @@
 
 @media (min-width: @tablet-width) {
   .present__title {
-    margin: 0;
+    margin: 72px 0 0 277px;
     text-align: left;
-    margin-top: 8px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .present__title {
     text-align: center;
-    margin-top: 63px;
+    margin: 62px auto 0 auto;
   }
 }
 
-.gift {
+.present__image {
   display: block;
   margin: 0 auto;
+  margin-top: 65px;
 }
 
 @media (min-width: @tablet-width) {
-  .gift {
-    margin: 0;
+  .present__image {
+    margin: 65px 0 0 92px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .gift {
-    margin-top: 64px;
-    margin-left: 55px;
+  .present__image {
+    margin: 64px auto 0 auto;
   }
 }
 
-.gift path {
+.present__image path {
   fill: @white;
 }

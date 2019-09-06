@@ -43,7 +43,7 @@
 
   &:active {
     border: 2px solid @base-text-color;
-    padding: 12px 0 12px 15px;
+    padding: 11px 0 11px 14px;
   }
 
   &:invalid {
@@ -56,6 +56,10 @@
     padding: 12px 0 12px 13px;
   }
 
+  &--name:active {
+    padding: 11px 0 11px 12px;
+  }
+
   &--weight {
     width: 204px;
   }
@@ -63,6 +67,10 @@
   &--age {
     width: 170px;
   }
+}
+
+.questionnaire__item::placeholder {
+  color: @base-text-color;
 }
 
 @media (min-width: @tablet-width) {
@@ -87,7 +95,7 @@
     }
 
     &:active {
-      padding: 9px 0 9px 18px;
+      padding: 9px 0 9px 17px;
     }
   }
 }

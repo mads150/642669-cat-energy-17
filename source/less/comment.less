@@ -7,8 +7,8 @@
     content: "";
     position: absolute;
     top: 15px;
-    left: 163px;
-    width: 100%;
+    left: 143px;
+    width: 100vw;
     height: 3px;
     background-color: @mohito;
   }
@@ -23,16 +23,16 @@
     &::before {
       content: "";
       position: absolute;
-      top: 20px;
-      right: 710px;
-      width: 100%;
+      top: 22px;
+      right: 708px;
+      width: 100vw;
       height: 3px;
       background-color: @mohito;
     }
 
     &::after {
-      top: 20px;
-      left: 290px;
+      top: 22px;
+      left: 218px;
     }
   }
 }
@@ -43,13 +43,13 @@
     margin-left: 0;
 
     &::before {
-      top: 20px;
+      top: 22px;
       right: 1260px;
     }
 
     &::after {
-      top: 20px;
-      left: 340px;
+      top: 22px;
+      left: 217px;
     }
   }
 }
@@ -66,6 +66,10 @@
   font-weight: @regular;
   color: @base-text-color;
   text-transform: uppercase;
+}
+
+.comment__text::placeholder {
+  color: @base-text-color;
 }
 
 @media (min-width: @tablet-width) {
