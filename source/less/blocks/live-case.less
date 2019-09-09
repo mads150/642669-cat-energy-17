@@ -40,9 +40,12 @@
 
 @media (min-width: @desktop-width) {
   .live-case__wrapper {
+    position: relative;
     background-color: @light-grey;
+    background-image: linear-gradient(to right, @light-grey 75%, #eaeaea 50%);
   }
 }
+
 
 @media (min-width: @tablet-width) {
   .live-case__table-wrapper {
@@ -58,7 +61,7 @@
 
 .live-case__text {
   margin-top: 24px;
-  margin-bottom: 39px;
+  margin-bottom: 38px;
   padding-right: 10px;
   font-family: "Arial", sans-serif;
   font-size: @smaller;
@@ -128,7 +131,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -13px;
+    top: -14px;
     left: 0;
     width: 122px;
     height: 54px;
@@ -195,12 +198,32 @@
 }
 
 .live-case__resources {
-  margin: 0 auto;
+  display: block;
   font-size: @smaller + 10;
   line-height: @smaller + 10;
   font-weight: @regular;
   text-transform: uppercase;
   color: @text-color;
+}
+
+.live-case__resources--weight {
+  margin-left: 43px;
+}
+
+@media (min-width: @tablet-width) {
+  .live-case__resources--weight {
+    margin-left: 58px;
+  }
+}
+
+.live-case__resources--days {
+  margin-left: 22px;
+}
+
+@media (min-width: @tablet-width) {
+  .live-case__resources--days {
+    margin-left: 29px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -243,6 +266,7 @@
 
 @media (min-width: @desktop-width) {
   .live-case__result {
+    margin-top: 11px;
     background-color: #f2f2f2;
   }
 }
@@ -303,12 +327,13 @@
     width: 100%;
     padding-top: 360px;
     padding-bottom: 67px;
-    background-color: @light-grey;
+    background-image: linear-gradient(to right, @light-grey 50%, #eaeaea 50%);
   }
 }
 
 @media (min-width: @desktop-width) {
   .live-case__slider {
+    background: none;
     padding-bottom: 67px;
   }
 }

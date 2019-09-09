@@ -31,7 +31,7 @@
   .filters__slogan {
     width: 324px;
     margin-top: 56px;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
     margin-left: 40px;
     font-size: @smaller + 6;
     line-height: @bigger - 6;
@@ -41,6 +41,7 @@
 @media (min-width: @desktop-width) {
   .filters__slogan {
     margin-left: 0;
+    margin-bottom: 28px;
   }
 }
 
@@ -50,7 +51,7 @@
 
 @media (min-width: @tablet-width) {
   .filters__form {
-    padding: 20px 0 72px 0;
+    padding: 18px 0 72px 0;
   }
 }
 
@@ -60,8 +61,24 @@
   }
 }
 
+.filters__program-data {
+  padding-bottom: 42px;
+}
+
+@media (min-width: @tablet-width) {
+  .filters__program-data {
+    padding-bottom: 96px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .filters__program-data {
+    padding-bottom: 91px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filters__program-data-container {
     display: flex;
     justify-content: space-between;
   }
